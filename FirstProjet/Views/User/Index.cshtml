@@ -1,0 +1,126 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<FirstProjet.Models.User>
+
+
+    @*<link rel="stylesheet" href="~/temp/Mystyle.css" /*@
+
+
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Liste de employes
+                        
+                    </h2>
+                </div>
+                
+            </div>
+    </div>
+<p>
+
+    <a asp-action="Create"><button asp-action="Create" type="button" class="btn btn-success">Ajouter empolye</button></a>
+</p>
+
+
+
+
+    <table id="example" class="display tb_width" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sexe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateEmbauche)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fonctionnalite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEquipe)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+       
+        </thead>
+        <tbody>
+        
+        @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateEmbauche)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fonctionnalite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEquipe)
+            </td>
+            <td>
+                
+                <a asp-action="Edit" asp-route-id="@item.Id">modifier</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Détails</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">supprimé</a>
+                
+            </td>
+        </tr>
+        
+}
+</tbody>
+            
+        
+
+</table>
+
